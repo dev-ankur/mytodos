@@ -1,0 +1,40 @@
+
+.Todo-container{
+    background-color: #fff;
+    width: calc( (100% - 11*30px)/12 * 8 + 7*30px);
+    margin-left: 30px;
+}
+
+.Title{
+    padding: 15px 20px;
+    font-size: 24px;
+    background-color: #49a09d;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+}
+
+.Title::placeholder{
+    color: #fff;
+    opacity: 0.4;
+}
+
+.My-document{
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    width: 100%;
+    height: calc(100% - 58px);
+    display: block;
+    box-sizing: border-box;
+    padding: 20px;
+    resize: none;
+}
+
+.My-document:active{
+    border: 0;
+    box-shadow: none;
+    outline: none;
+}

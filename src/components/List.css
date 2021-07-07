@@ -1,0 +1,59 @@
+
+
+.List-container{
+    background-color: #fff;
+    width: calc( (100% - 11*30px)/12 * 4 + 3*30px);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+ul li{
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li span{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgb(170, 0, 0);
+    color: #fff;
+    padding: 15px;
+}
+
+ul li:hover span{
+    display: block;
+}
+
+ul li:hover span:hover{
+
+}
+
+
+ul li:nth-child(even){
+    background-color: #E1E1E1;
+}
+
+.Add-new{
+    width: 100%;
+    background: linear-gradient(to left, #5f2c82, #49a09d);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+}
