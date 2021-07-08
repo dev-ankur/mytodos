@@ -27,7 +27,7 @@ class List extends React.Component {
     }
 
     render() {
-        var list = this.props.list.map((k,i) => (<li onClick={this.selectDoc.bind(this, i)} key={k.id}>{k.title} <span onClick={(e) => this.deleteDoc(i, e)}>Delete</span></li>))
+        var list = this.props.list.map((k,i) => (<li onClick={this.selectDoc.bind(this, i)} key={k.id} className={i == this.props.sIndex ? 'active': ''}>{k.title} <span onClick={(e) => this.deleteDoc(i, e)}>Delete</span></li>))
 
         return (
             <div className="List-container">

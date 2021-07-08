@@ -102,7 +102,7 @@ class App extends React.Component {
           <span className="Caption">Made by Ankur Shah</span>
         </header>
         <div className="Main">
-          <List list={this.state.list} onChangeSelected={this.changeSelected} appendNewDoc={this.appendNewDoc} deleteDocument={this.deleteDocument} />
+          <List list={this.state.list} sIndex={this.state.selectedListIndex} onChangeSelected={this.changeSelected} appendNewDoc={this.appendNewDoc} deleteDocument={this.deleteDocument} />
           <Todo doc={this.state.list[this.state.selectedListIndex]} onTitleEdit={this.editSelectedTitle} onContentEdit={this.editSelectedContent} />
         </div>
       </div>
