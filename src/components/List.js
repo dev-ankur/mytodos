@@ -2,6 +2,13 @@
 import React from 'react';
 import './List.css';
 
+function scrollListUp(){
+    // code for scrolling list to top
+    let l = document.querySelector(".List-container ul");
+
+    // l.scrollTop = 1000;
+}
+
 class List extends React.Component {
 
     constructor(props){
@@ -19,6 +26,10 @@ class List extends React.Component {
 
     addNewDoc(){
         this.props.appendNewDoc();
+        setTimeout(() => {
+            // scroll to top
+            scrollListUp();
+        }, 200);
     }
 
     deleteDoc(i, e){

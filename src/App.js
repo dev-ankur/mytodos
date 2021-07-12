@@ -10,12 +10,26 @@ class App extends React.Component {
 
   constructor(props){
     super(props);
-    this.state = {
-      list: [
-        {id: uuidv4(), title: 'Sample Document', content: 'Hello World! This is a sample document'},
-        {id: uuidv4(), title: 'Document 2', content: ''}
-      ],
-      selectedListIndex: 0
+
+    if(localStorage.getItem('list') == null){
+      console.log('A');
+      let obj = {
+        list: [
+          {id: uuidv4(), title: 'Sample Document', content: 'Hello World! This is a sample document'},
+          {id: uuidv4(), title: 'Document Title 2', content: ''}
+        ],
+        selectedListIndex: 0
+      }
+
+      this.state = obj;
+      localStorage.setItem('list', JSON.stringify(obj.list));
+      localStorage.setItem('selectedListIndex', 0);
+    }else{
+      console.log('B');
+      this.state = {
+        list: JSON.parse(localStorage.getItem('list')),
+        selectedListIndex: JSON.parse(localStorage.getItem('selectedListIndex'))
+      }
     }
 
     this.changeSelected = this.changeSelected.bind(this);
@@ -31,6 +45,7 @@ class App extends React.Component {
     this.setState({
       selectedListIndex: e
     })
+    localStorage.setItem('selectedListIndex', e);
   };
 
   editSelectedTitle(s){
@@ -39,6 +54,7 @@ class App extends React.Component {
     this.setState({
       list: l
     });
+    localStorage.setItem('list', JSON.stringify(l));
   }
 
   editSelectedContent(s){
@@ -47,6 +63,7 @@ class App extends React.Component {
     this.setState({
       list: l
     });
+    localStorage.setItem('list', JSON.stringify(l));
   }
 
   appendNewDoc(){
@@ -56,13 +73,15 @@ class App extends React.Component {
     // let n_id = 2;
     l.push({
       id: uuidv4(),
-      title: "Document " + n_id,
+      title: "Document Title " + n_id,
       content: ""
     })
     this.setState({
       list: l,
       selectedListIndex: i
     });
+    localStorage.setItem('selectedListIndex', i);
+    localStorage.setItem('list', JSON.stringify(l));
   }
 
   deleteDocument(i){
@@ -72,26 +91,29 @@ class App extends React.Component {
     let sInx = this.state.selectedListIndex;
 
     if(l.length == 0){
-      l.push({id:uuidv4(), title: 'Document 1', content: ''});
+      l.push({id:uuidv4(), title: 'Document Title 1', content: ''});
     }
 
     if(this.state.selectedListIndex == this.state.list.length){
       this.setState({
         selectedListIndex: sInx-1
       });
+      localStorage.setItem('selectedListIndex', sInx-1);
     }
 
     if(i == this.state.selectedListIndex){
+      let k = i == 0 ? i : i - 1;
       this.setState({
-        selectedListIndex: i == 0 ? i : i - 1
+        selectedListIndex: k
       });
+      localStorage.setItem('selectedListIndex', k);
     }
 
     this.setState({
       list: l
     });
 
-
+    localStorage.setItem('list', JSON.stringify(l));
   }
 
   render(){
