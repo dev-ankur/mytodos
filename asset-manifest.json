@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mytodos/static/css/main.f9c6365b.chunk.css",
+    "main.js": "/mytodos/static/js/main.a1389c69.chunk.js",
+    "main.js.map": "/mytodos/static/js/main.a1389c69.chunk.js.map",
+    "runtime-main.js": "/mytodos/static/js/runtime-main.4838ae5c.js",
+    "runtime-main.js.map": "/mytodos/static/js/runtime-main.4838ae5c.js.map",
+    "static/js/2.54075402.chunk.js": "/mytodos/static/js/2.54075402.chunk.js",
+    "static/js/2.54075402.chunk.js.map": "/mytodos/static/js/2.54075402.chunk.js.map",
+    "static/js/3.120a0c3f.chunk.js": "/mytodos/static/js/3.120a0c3f.chunk.js",
+    "static/js/3.120a0c3f.chunk.js.map": "/mytodos/static/js/3.120a0c3f.chunk.js.map",
+    "index.html": "/mytodos/index.html",
+    "static/css/main.f9c6365b.chunk.css.map": "/mytodos/static/css/main.f9c6365b.chunk.css.map",
+    "static/js/2.54075402.chunk.js.LICENSE.txt": "/mytodos/static/js/2.54075402.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4838ae5c.js",
+    "static/js/2.54075402.chunk.js",
+    "static/css/main.f9c6365b.chunk.css",
+    "static/js/main.a1389c69.chunk.js"
+  ]
+}
